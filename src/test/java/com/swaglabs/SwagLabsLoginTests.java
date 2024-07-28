@@ -18,7 +18,7 @@ public class SwagLabsLoginTests extends BaseTest {
       loginPage.verifyLoginPageTitle();
       test.get().log(Status.PASS, "Login Page Title Verified");
 
-      loginPage.login(ConfigReader.getProperty("username"), "dfdfd");
+      loginPage.login(ConfigReader.getProperty("username"), ConfigReader.getProperty("password"));
       test.get().log(Status.INFO, "Entered Username and Password");
 
       ProductsPage productsPage = new ProductsPage(driver);
